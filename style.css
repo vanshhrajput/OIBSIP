@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,500&family=Poppins:wght@300&display=swap');
+:root{
+    --primarycol:#101820;
+    --secondcol:#009bf9;
+    --textcol:#F2FAFF;
+    --gray:rgba(42,53,62,0.4);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none!important;
+    border:none;
+    list-style: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    background: var(--primarycol);
+    color: var(--textcol);
+   
+}
+#mainNavbar{
+    background-color: var(--primarycol)!important;
+    border-bottom: 1 px solid var(--gray);
+}
+#mainNavbar .nav-item .nav-link {
+    position: relative;
+    color: var(--textcol);
+  }
+  
+  /* Add a sliding underline to the navigation links */
+  #mainNavbar .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondcol);
+    bottom: -3px;
+    left: 0;
+    transition: width 0.4s ease; /* Simplify transition property */
+  }
+  
+  /* Expand the underline on hover */
+  #mainNavbar .nav-item:not(:last-child) .nav-link:hover::after {
+    width: 100%;
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus{
+    outline: none;
+    box-shadow: none;
+  }
+
+  /*hero section*/
+  section{
+    padding: 5rem 0;
+  }
+  .section-title{
+    margin-top:2rem;
+    
+    padding-bottom: 4rem;
+    position: relative;
+  }
+  .sub-title{
+    
+    color: var(--secondcol);
+    font-size: 11px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  #hero{
+   background-image:url('https://images.unsplash.com/photo-1638184984605-af1f05249a56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80') ;
+   background-repeat: no-repeat;
+   background-position: center right;
+   background-size: cover;
+  }
+  #hero .social a{
+transition: width all 0.4s;
+  }
+  #hero .social a:hover{
+    color: var(--textcol);
+    transition: width scale(1.2);
+  }
+  #hero h1 .typer{
+    color: var(--secondcol);
+  }
+  /*about*/
+  .exp{
+    background-color: var(--gray);
+    border-radius: 7px;
+    box-shadow: 0px 30px 45px rgba(22, 22, 22, 0.15);
+  }
+  .exp-number{
+    margin-top: 20px;
+    margin-bottom: -3px;
+  }
